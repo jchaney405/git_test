@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
+    <title>HTML Fundamental's Notes</title>
 </head>
 <body>
     <!-- Below are some common elements used when working with text. These include headers, paragraphs, strong (bold), and em (italic) -->
@@ -77,13 +77,83 @@
         <h3>Absolute and Relative Links</h3>
             <p>
                 <strong>Absolute Links:</strong> Links to pages on other websites on the internet are called absolute links. A typical absolute link will be made up of the following parts.
-                <ul>
-                    <li><em>protocal://domain/path</em></li>
-                    <li><strong>Ex:</strong> <em>https://www.theodinproject.com/about</em></li>
-                </ul>
+                    <ul>
+                        <li><em>protocal://domain/path</em></li>
+                        <li><strong>Ex:</strong> <em>https://www.theodinproject.com/about</em></li>
+                    </ul>
                 <Strong>Relative Links:</Strong> These are links to other pages within our own website. These links do not include the domain name as it assumes the domain name will be the same since it is a page on the same site. These links only include the file path to the other page.
             </p>
-       
+        <h3>Images</h3>
+            <p>
+                To display an image in HTML we use the <em>img</em> element. The <em>img</em> element is self closing, meaning that you do not need to include a closing tag. Instead of wrapping the content, it embeds an image into the page using a src attribute that tells the browser where the image file is located.  This <em>src</em> attribute works much like the <em>href</em> attribute for anchor tags and embeds the image with the use of either absolute or relative paths.
+                <ul>
+                    <li><Strong>Parent Directories:</Strong> What if we wanted to use the image in a page that is in a outside of the current directory? To get back to the parent directory we us (Two) .. in the filepath instead of just (one) .</li>
+                        <ul>
+                            <li><strong>Ex:</strong> <em>'img src="../images/Unicorn Rampage Logo.jpg"</em></li>
+                        </ul>
+                    <li><strong>Alt Attribute:</strong> Besides the <em>src</em> attribute, every image element must also have an <em>alt</em> (alternative text) attribute.</li>
+                        <ul>
+                            <li>The <em>alt</em> attribute is used to describe an image</li>
+                            <li>It is used in place of the image if the image cannot be loaded</li>
+                            <li>It is also used with screen readers to describe what the image is to visually impaired users</li>
+                        </ul>
+                    <li><strong>Height and Width Tags:</strong> You can specify the height and width of an image in the attributes. This helps the browser layout the page without causing the page to jump and flash. It is good practice to include these attributes even when the image is already the correct size or  you are using CSS to modify it</li>
+                </ul>
+            </p>
+            <p>
+                There are 4 main image formats that are in use on the web. Each was designed to do different things.
+                <ol>
+                    <li><strong>JPG Images:</strong> These images are designed for handling large color palettes without dramatically increasing size of the file. This attribute makes them great for photos and images with lots of color gradients in them. They do not allow for transparent pixels though.</li>
+                    <li><strong>GIF Images:</strong> These are the go-to for simple animations. They are limited when it comes to color palette. They should never be used for photos. Transparent pixels are a binary option for GIFs, meaning you can't have semi-opaque pixels. This can make it difficult to get high levels of detail ona transparent background.</li>
+                    <li><strong>PNG Images:</strong> These images are great for anything that is not a photo or animated. They deal with opacity just fine and do not have color palette limitations making them excellent for use in icons, technical diagrams, & logos</li>
+                    <li><strong>SVG Images:</strong> These images are not pixel based as the other three types are. They are Vector-based graphics. This means they can scale up or down to any dimension without loss of quality. This attribute makes them great for Respnsive design. They can be used in almost all the same cases as PNGs and should be used whenever possible. The downside to their use is for them to display consistently across browsers, you must convert any text fields to outlines using your image editor. If your image contains a lot of text this can have a huge impact on file size.</li>
+                </ol>
+            </p>
+    <h2>Commit Messages</h2>
+        <h3>What is important about Commit Messages?</h3>
+            <ol>
+                <li>When you are applying for jobs, employers will look through your projects on GitHub and they will look through your commit history. Having good commits as a novice developer will help you stand out.</li>
+                <li>Having good commit message history will allow you (or other developers working on your code) to quickly see what changes were made and why. This is useful if a bug is found in the code that needs to be fixed!</li>
+                <li>Having a good commit message history will also be helpful if you come back to a project you were working on after stepping away from it for a while. You likely won't remember your thought process and changes made when initially writing out the code.</li>
+            </ol>
+            Solid effective commits will contain two separate parts. A <strong>Subject</strong> and a <strong>Body</strong>
+            <ul>
+                <li><strong>Subject:</strong> A brief summary of the change you made to the project.</li>
+                    <ul>
+                        <li><strong>Ex:</strong> <em>This is the change I made to the codebase.</em></li>
+                    </ul>
+                <li><strong>Body:</strong> A concise yet clear description of what you did.</li>
+                    <ul>
+                        <li><strong>Ex:</strong> <em>Describe the problem your commit solves and how.</em></li>
+                    </ul>
+                <li><strong>Full Example of a Good Commit Message</strong></li>
+                    <ol>
+                        <li>| Add missing link and alt text to the company's logo</li>
+                        <li>|</li>
+                        <li>|Screen readers won't read the images to users with disabilities without this information</li>
+                    </ol>
+                    <p>
+                        This message:
+                            <ul>
+                                <li>Provides a subject that specifies your code's action</li>
+                                <li>Contains a body that provides a concise yet clear description of why the commit needed to be made.</li>
+                                <li>Separates the jusbject from the body with a new/blank line. This is best practice and should be the format used going forward.</li>
+                            </ul>
+                    </p>
+            </ul>
+        <h3>When to Commit</h3>
+            <ol>
+                <li>Everytime you have a meaningful change in the code. Creating a timeline of your progress and show that your finished code didn't appear out of nowwhere.
+                    <ul>
+                        <li>Get a piece of code to function as you like.</li>
+                        <li>Fix a typo</li>
+                        <li>Fix a bug</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>
+                There will come a time when the project is FINALLY working as you want it to. This is when you should commit. Then later if it breaks and you don't know what changed to break it you can revert back to that commit when it all worked as you intended and see what it looked like then and what changed since.
+            </p>
 
 </body>
 </html>

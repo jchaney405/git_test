@@ -48,6 +48,42 @@
                 <li>Item 3</li>
             </ol>
     <h2>Links and Images</h2>
-    
+        <p>
+            <strong>Anchor Elements:</strong> To create a link in HTML, we use the anchor element. An anchor element is defined by wrapping the tesct or another HTML element iwe want to be a link with an "a" tag.
+            <ul>
+                <li>Clicking on the newly created link does nothing. In order for the link to work we have to tell it a destination to go to by using an HTML attribute</li>
+                <li>An HTML attribute gives the additional information to an HTML element and always goes in the element's opening tag. An attribute is usually made up of 2 parts</li>
+                    <ol>
+                        <li>A name</li>
+                        <li>A value</li>
+                    </ol>
+                <li>In this case we need to add an href(hypertext reference) attribute to the opening anchor tag. This href attribute is the destination we would like to link to.</li>
+                <li>By default any text wrapped with and anchor tag not containing the <em>href</em> attribute will look like plain text. With the href tag present the browser will give the text a blue color and underline it to signify it is a link.</li>
+                <li>You can use anchor tages to link to any kind of resource on the internet, not just other HTML documents. You can link videos, pdf files, images, and so on.</li>
+                <li>By default the link will open in the current open tab. If you want the link to open in a place other than the current tab you must add a target attribute to the <em>href</em> element</li>
+                    <ul>
+                        <li>The default to open in the same tab <em>target="_self"</em></li>
+                        <li>To open in a new tab or window <em>target="_blank"</em></li>
+                    </ul>
+                <li>The <em>rel</em> attribute is used to describe the relation between the current page and the linked document</li>
+                    <ul>
+                        <li><em>rel="noopener"</em> prevents the opened link from gaining access to the webpage from whish it was opened.</li>
+                        <li><em>rel="noreferrer"</em> prevents the opened link from knowing which webpage or resource has a link (or 'reference') to it. It also includes the noopener behaviour and thus can be used by itself as well.</li>
+                    </ul>
+                <li>These two <em>rel</em> attributes are in place for additional security. The prevention of access created with the "noopener" prevents phishing attacks wher the opened link may change the original webpage to a different one to trick users.  This is refered to as tabnabbing. Adding the "noreferrer" value can be done if you wish to not let the opened link know that your webpage links to it.</li>
+                <li>More recent versions of browsers have security built in to prevent these types of attacks  if you do not include the <em>rel</em> attributes, but it is always recommended to pair a <em>'target="_blank"'</em> with the two <em>rel</em> attributes.</li>
+            </ul>            
+        </p>
+        <h3>Absolute and Relative Links</h3>
+            <p>
+                <strong>Absolute Links:</strong> Links to pages on other websites on the internet are called absolute links. A typical absolute link will be made up of the following parts.
+                <ul>
+                    <li><em>protocal://domain/path</em></li>
+                    <li><strong>Ex:</strong> <em>https://www.theodinproject.com/about</em></li>
+                </ul>
+                <Strong>Relative Links:</Strong> These are links to other pages within our own website. These links do not include the domain name as it assumes the domain name will be the same since it is a page on the same site. These links only include the file path to the other page.
+            </p>
+       
+
 </body>
 </html>

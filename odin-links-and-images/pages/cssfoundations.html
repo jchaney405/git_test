@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Foundations Notes</title>
+</head>
+<body>
+    <a href="../index.html" target="_self" rel="noopener noreferrer">Notes Homepage</a>
+    <h1>CSS Basics</h1>
+    <h2>Basic Syntax:</h2>
+        <p>
+            <strong>CSS</strong> is made up of various rules. Each rule is comprised of a selector and a semicolon-separated list of declarations. Each declaration is made up of a property-value pair.
+        </p>
+    <h2>Selectors:</h2>
+        <p>
+         Selectors refer to the HTML elements to which CSS rules apply. There are many types of selectors but here are the most common.
+         <ul>
+            <li><strong>Universal Selector:</strong> The universal selector selects elements of any type. You use <strong>* {}</strong> to call this.</li>
+            <li><strong>Type Selector:</strong> Will select all elements of the given Element type. The name of the element type followed by {} is used to acll this</li>
+            <li><strong>Class Selector:</strong> Will select all elements of the given Class, which is just an attribute that you place on a HTML element.  <strong><em>.class-name</em></strong> followed by {} is used to call this</li>
+                <ul>
+                    <li>Syntax for class selectors: a period immediately followed by the case-sensitive value of the class attribute. Classes are not required to be specific to a particular element, so you can use the same class on as many elements as you want.</li>
+                    <li>Another thing you can do with the class attribute is to add multiple classes to a single element as a space-separated list. Since whitespace is used to separate class names like this, you should never use spaces for multi-worded names and should use a hyphen instead.</li>
+                </ul>
+            <li><Strong>ID Selector:</Strong> Will select an element with the given ID, which is another attribute you place on an HTML element.</li>
+                <ul>
+                    <li>Unlike a class, an element can only have 1 ID.</li>
+                    <li>An ID cannot be repeated on a page and should not contain any whitespace.</li>
+                    <li>ID's use the <em>#</em> symbol immediately followed by the case-sensitive value of the ID</li>
+                    <li>ID are often overused when a class would work better and should be used sparingly. They are best used when taking advantage of specificity or having links redirect to a section on the current page.</li>
+                </ul>   
+            <li><strong>Grouping Selector:</strong> We can group selectors as a comma separated list to cut down on the repetition</li>
+            <li><strong>Chaining selectors:</strong> You can also chain Class Selectors or a Class and ID selector to format very specific elements.</li>
+         </ul>
+        </p>
+    <h2>Descendant Combinator:</h2>
+        <p>    
+        Combinators allow us to combine multiple selectors differently than either grouping or chaining them, they show a relationship between the selctors. There are 4 types of combinators in total, but we will cover 1 for now.
+        </p>
+        <P><Strong>Descendant Combinator</Strong></P> - This is represented in CSS by a single space between selectors. This combinator will only cause elements that match the last selector to be selected if they also have and ancestor <em>(parent, grandparent, etc.)</em> that matches the previous selector.
+    <h2>Properties to get started with</h2>
+        <p>There are some CSS properties that you're going to be using all the time, or at the very least more often than not.</p>
+        <ul>
+            <li><strong>color</strong> - will set an element's text color</li>
+            <li><strong>background-color</strong> - will set the background color of an element</li>
+            <p>These color properies will accept several types of values.</p>
+            <ul> 
+                <li><strong>Keyword</strong> - such as "red" or "transparent"</li>
+                <li><strong>HEX</strong> - such as "#1100ff"</li>
+                <li><strong>RGB</strong> - "rgb(100, 0, 127)"</li>
+                <li><strong>HSL</strong> - "hsl(15, 82%, 56%)</li>
+            </ul>
+        </ul>
+    <h2>Typography Basics and Text-Align:</h2>
+        <p>
+            '<strong>font-family</strong>' can be a single value or a comma-separated list of values that determin what font an element uses. Each font will fall into one of two categories, either a "font family name" like "Times new Roman" or a "generic family name" like serif.
+        </p>
+        <p>
+            If a browser cannot find or does not support the first font in a list, it will use the nect one, then the next one and so on until it findsa a supported and valid font. This is why it;s best practice to include a list ofvalues for this property, starting with the font you want to be used most and ending with a generic fon family as a fallback.
+        </p>
+        <P>
+            '<strong>font-size</strong>' sets the size of the font. When giving a value to this property, the value should not contain any whitespace, ex. 22px
+        </P>
+        <p>
+            '<strong>font-weight</strong>' sets the boldness of text. This will accept keyword or numeric values such as "bold" or a number from 1-1000. 700 is equivalent to bold. Numeric values will be in increments of 100 up to 900.
+        </p>
+        <p>
+            '<strong>text-align</strong>'will align text horizontally within an element, and you can use the common keywords you may have com across in word processors as the value for this property such as 'left', 'right','center'
+        </p>
+    <h2>Image Height and Width:</h2>
+    </body>
+
+</html>

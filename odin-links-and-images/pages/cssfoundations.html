@@ -69,6 +69,29 @@
             '<strong>text-align</strong>'will align text horizontally within an element, and you can use the common keywords you may have com across in word processors as the value for this property such as 'left', 'right','center'
         </p>
     <h2>Image Height and Width:</h2>
+        <p>
+            An image's height and width values will be the same as the actual images height and width. To adjust the size of an image us the "auto" height and adjust the width property. It is best practice to always include both the height and width properties alon with the HTML attributes for image elements. This explicitly stating of the height and width prevents any drastic shift in content if an image takes longer to load to a page as it "reserves that space until the image has loaded.
+        </p>
+    <h2>Adding CSS to HTML</h2>
+        <p>There are 3 methods to adding CSS to your HTML
+            <ol>
+                <li><strong>External CSS</strong> This is the most common method and involves creating a separate file for the CSS and linking it isnside of an HTML's opening and closing 'head' tages with a self-closing "link" element.</li>
+                    <ul>
+                        <li>This keeps our HTML and CSS separated, which results in the HTML file being smaller and making things look cleaner.</li>
+                        <li>We only need to edit the CSS in <em>one</em> place, which is especially handy for websites with many pages that all share similar styles.</li>
+                    </ul>
+                <li><strong>Internal CSS</strong> or <em>Embedded CSS</em> involves adding the CSS within the HTML file itself instead of creating a completely separate file.</li>
+                    <ul>
+                        <li>This method can be useful for adding unique styles to a single page of a website, but it doesn't keep things separate like the external method, and depending on how many rules and declarations there are it can cause the HTML file to get pretty big.</li>
+                    </ul>
+                <li><strong>Inline CSS</strong> allows you to add styles directly to HTML elements, though this method is not as recommended. If you need to add a unique style for a single element, this method can work just fine. Otherwise it is not recommended for a few reasons.</li>
+                    <ul>
+                        <li>It can quickly become pretty messy once you start adding a lot of declarations to a single element, causing your HTML file to become unnecessarily bloated.</li>
+                        <li>If you want many elements to have the same style, you would have to copy and paste the same style to each indidvidual element, causing lots of unnecessary repetition and more bloat.</li>
+                        <li>Any inline CSS will override the other two methods, which can cause enexpected results.</li>
+                    </ul>
+            </ol>
+        </p>
     </body>
 
 </html>
